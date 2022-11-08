@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class DecriptionManager extends Cription{
+public class DecryptionManager extends Crypto {
 
     @Override
     public List<Integer> shifting(int k, List<Integer> messageIndexes) {

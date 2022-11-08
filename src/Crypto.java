@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Cription {
+public abstract class Crypto {
 
     public abstract List<Integer> shifting(int k,List<Integer> messageIndexes);
     //this generateMessageWithIndex function take a message and return index list.

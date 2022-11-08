@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class EncriptionManager extends Cription {
+public class EncryptionManager extends Crypto {
     /*
      this shifting function take key knowledge and List of message indexes. return shift index list.
      */
