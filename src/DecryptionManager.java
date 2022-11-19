@@ -15,4 +15,10 @@ public class DecryptionManager extends Crypto {
         }
         return shiftingMessage;
     }
+
+    @Override
+    public String subsCipher(String message) {
+        List<Integer> messageIndex = generateMessageWithIndexsubs(message);
+        return returnNewMessage(messageIndex);
+    }
 }

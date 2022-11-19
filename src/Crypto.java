@@ -16,11 +16,29 @@ public abstract class Crypto {
         }
         return messageWithIndex;
     }
+    public List<Integer> generateMessageWithIndexsubs(String message) {
+        List<Integer> messageWithIndex = new ArrayList<>();
+        for (int i = 0; i< message.length(); i++) {
+            for(int j = 0 ; j<Alphabet.subschars.length;j++) {
+                if(message.charAt(i)==Alphabet.chars[j]){
+                    messageWithIndex.add(j);
+                }
+            }
+        }
+        return messageWithIndex;
+    }
     //cryptoMessage function return new cyrpto message.
     public String returnNewMessage(List<Integer> messageIndexes) {
         StringBuilder sb = new StringBuilder();
         for(int i = 0; i< messageIndexes.size(); i++) {
             sb.append(Alphabet.chars[messageIndexes.get(i)]);
+        }
+        return sb.toString();
+    }
+    public String returnNewMessageSubs(List<Integer> messageIndexes) {
+        StringBuilder sb = new StringBuilder();
+        for(int i = 0; i< messageIndexes.size(); i++) {
+            sb.append(Alphabet.subschars[messageIndexes.get(i)]);
         }
         return sb.toString();
     }
@@ -33,5 +51,6 @@ public abstract class Crypto {
        System.out.println("new message: "+ cryptoMessage(shifting(k,generateMessageWithIndex(message))));*/
         return returnNewMessage(shifting(k,generateMessageWithIndex(message)));
     }
+    public abstract String subsCipher(String message);
 
 }

@@ -16,4 +16,10 @@ public class EncryptionManager extends Crypto {
        }
        return shiftingMessage;
    }
+
+    @Override
+    public String subsCipher(String message) {
+        List<Integer> messageIndex = generateMessageWithIndex(message);
+        return returnNewMessageSubs(messageIndex);
+    }
 }
