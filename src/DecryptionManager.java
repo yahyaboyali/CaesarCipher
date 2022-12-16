@@ -21,4 +21,9 @@ public class DecryptionManager extends Crypto {
         List<Integer> messageIndex = generateMessageWithIndexsubs(message);
         return returnNewMessage(messageIndex);
     }
+
+    @Override
+    public String affineCipher(int a, int b, String message) {
+        return null;
+    }
 }

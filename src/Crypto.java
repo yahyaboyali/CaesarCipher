@@ -53,4 +53,5 @@ public abstract class Crypto {
     }
     public abstract String subsCipher(String message);
 
+    public abstract String affineCipher(int a, int b, String message);
 }

@@ -16,5 +16,7 @@ public class Main {
         System.out.println("---------Substitution-----------");
         System.out.println("şifreli: "+ subsdeneme);
         System.out.println("çözülmüş hal: "+ subsdeneme2);
+        System.out.println("---------affine-----------");
+        System.out.println(encryptionManager.affineCipher(21,43,"selam"));
     }
 }

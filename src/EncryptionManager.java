@@ -22,4 +22,19 @@ public class EncryptionManager extends Crypto {
         List<Integer> messageIndex = generateMessageWithIndex(message);
         return returnNewMessageSubs(messageIndex);
     }
+
+    @Override
+    public String affineCipher(int a, int b, String message) {
+       List<Integer> messageWithIndex = generateMessageWithIndex(message);
+       List<Integer> newMessageWithIndexes = new ArrayList<>();
+       for (int i = 0 ; i< messageWithIndex.size(); i++) {
+           //y = ax +b mod 26
+           if(messageWithIndex.get(i)*a+b>Alphabet.chars.length) {
+               newMessageWithIndexes.add(((messageWithIndex.get(i)*a)+b)%26);
+           } else {
+               newMessageWithIndexes.add((messageWithIndex.get(i)*a)+b);
+           }
+       }
+        return returnNewMessage(newMessageWithIndexes);
+    }
 }
